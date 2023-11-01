@@ -2,6 +2,7 @@
   --nav-color: #BE3144;
   --welcome-color: #1A191B;
   --welcome-project-color:#383A3D;
+  --project-grid-color:#45567D;
 }
 
 * {
@@ -76,15 +77,52 @@ body{
 }
 
 /*меню проєктів>*/
+.main-project{
+  background-color: var(--project-grid-color);
+}
+
+
+.grid{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:100px;
+  margin-bottom: 80px;
+  margin-left:510px;
+  font-size: 40px;
+}
+
+.title-grid-tex{
+  color:aliceblue;
+  border-bottom:3px solid white;
+  padding-bottom:8px ;
+}
+ 
+p{
+  text-decoration: none;
+}
 
 .grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(3, 0.25fr);    /*три стовпчики */
   grid-template-rows: auto;
-  gap:16px;
+  gap:40px;
   z-index: -1;
 }
-
+.grid-block p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:aliceblue;
+  height: 60px;
+  background-color: var(--welcome-project-color);
+  font-weight: 700;
+  font-size: 19px;
+  
+}
 
 .image-container {
   width: 100%;  /* повна ширина комірки гріда */
