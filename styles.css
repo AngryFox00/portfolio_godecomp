@@ -24,6 +24,7 @@ body{
   align-items: center;   /* Вирівнюємо елементи по центру по вертикалі */
   justify-content: flex-end; /* Елементи справа */
   box-shadow: 0px 2px 3px #141416;     /*тінь навбару*/
+  z-index:1;
 }
 
 /* Стилізація списку */
@@ -75,3 +76,26 @@ body{
 }
 
 /*меню проєктів>*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 0.25fr);    /*три стовпчики */
+  grid-template-rows: auto;
+  gap:16px;
+  z-index: -1;
+}
+
+
+.image-container {
+  width: 100%;  /* повна ширина комірки гріда */
+  height: 390px;  /* висота, яку ви хочете встановити */
+  overflow: hidden;  /* обрізати зайве зображення за межами контейнера */
+  position: relative;  /* відносне позиціонування для вкладеного зображення */
+}
+
+.image-container img {
+  width: 100%;  /* повна ширина контейнера */
+  height: 100%;  /* повна висота контейнера */
+  object-fit: cover;  /* підігнати зображення, обрізаючи зайве */
+  object-position: center;  /* відцентрувати зображення */
+}
